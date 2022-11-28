@@ -7,17 +7,18 @@ public class MainPersonaIdioma {
 		
 		Persona per1 = new Persona("Pablo","Inglés");
 		
-		per1.decir("Hola", "Alemán");
+		per1.decir("Hallo", "Alemán");
 
 		per1.aprender("Italiano");
 		
-		per1.decir("Hola", "Alemán");
+		per1.decir("Hallo", "Alemán");
 		
 		per1.aprender("Alemán");
 		
-		per1.decir("Hola", "Alemán");
+		//f3 + método y lleva a donde está creado
+		per1.decir("Hallo", "Alemán");//f5 entra dentro del método
 		
 
-	}
+	}//f8 termina la ejecución
 
 }
