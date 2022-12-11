@@ -3,18 +3,30 @@ package ar.com.codoacodo.introinterfaces;
 public class MainInterfaces {
 
 	public static void main(String[] args) {
+		//creo una persona y un perro
+		// e invoco el hablar de cada una
+		
+		//Clase nombreObjeto = new Clase();
+	
+		Perro patan = new Perro("patan");
+		
+		//por implementar IHablar las dos instancias
+		// entienden el metodo hablar()
+		
 
-		Perro patan = new Perro("Patan");
+		//puedo ver los metodos de Persona + IHablar 
 		
-		Gato aryss = new Gato("Aryss");
+		patan.hablar();
 		
-		IHablar[] animales = new IHablar[2];
-		animales[0] = patan;
-		animales[1] = aryss;
+		//Interface nombreObjeto = new Clase();
+		IHablar[] pers = new IHablar[2];
 		
+
+		pers[1] = patan;
+						
+		IHablar i = pers[0];
+		i.hablar();
 		
-		
-		
+
 	}
-
 }

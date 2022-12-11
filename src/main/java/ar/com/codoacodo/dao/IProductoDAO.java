@@ -6,28 +6,24 @@ import ar.com.codoacodo.domain.Producto;
 
 public interface IProductoDAO {
 
-	/* define los métodos de acceso a la tabla PRODUCTOS */
-	/* CRUD: CREATE */
-
-	// select * from producto where id = id
+	/*define los metodos de acceso a la tabla PRODUCTOS*/
+	/*CRUD*/
 	public Producto getById(Long id) throws Exception;
-
-	// como es findAll, no requiere condictión
-	// select * from producto
+	//select * from producto where id = id
+	
 	public List<Producto> findAll() throws Exception;
-
-	// le decimos qué vamos a eliminar
-	// delete from producto where id = id
+	//select * from producto
+	
 	public void delete(Long id) throws Exception;
-
-	// va a venir con un identificador desde afuera
-	// update producto
-	// set campo1 =valor1 ...etc
-	// where id = producto.id
+	//delete from producto where id = id
+	
 	public void update(Producto producto) throws Exception;
-
-	// insert into producto (campo1,..., campoN)
-	// values()newProducto.campo1, ..., newProducto.campoN)
-	public void create(Producto newProducto) throws Exception;
-
+	//update producto 
+	//set campo1 = valor1.....
+	//where id = producto.id
+	
+	public void create(Producto newProduct) throws Exception;
+	//insert into producto (campo1, ....m campoN)
+	//values(newProducto.campo1, ...newProducto.campoN)
+	
 }

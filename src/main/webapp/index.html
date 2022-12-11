@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <p>Nuevo index llamado pepe.html, redireccionado desde web.xml</p>
+      <button onclick="verListado()">Ver listado de producto</button>
+    </main>
+
+    <script type="text/javascript">
+        function verListado(){
+            //http://localhost:8080/app-web/FindAllProductoController
+            window.location = 'http://localhost:8080/app-web/FindAllProductoController';
+        }
+    </script>
+  </body>
+</html>

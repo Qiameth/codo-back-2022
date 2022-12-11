@@ -1,9 +1,12 @@
 package ar.com.codoacodo.controllers;
 
+import java.util.Scanner;
+
 public class AltaDeProductoController {
 
 	public static void main(String[] args) {
 		
+		Scanner teclado = new Scanner(System.in);
 		//usar el Scanner
 		
 		//leer los datos e insertar en la db
@@ -22,7 +25,10 @@ public class AltaDeProductoController {
 				+ "3 - modificacion\r\n"
 				+ "4 - eliminar"
 				+ "5 - cancelar");
+		int opcion = 1;
 		
+		IAccion accion = AccionManager.buildAccion(opcion, teclado);
+		accion.execute();
 		
 		//DO-WHILE
 		//LOGICA DE UDS

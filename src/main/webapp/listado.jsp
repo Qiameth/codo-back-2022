@@ -1,53 +1,55 @@
-<!DOCTYPE html>
+<!Doctype html>
+<!-- directiva para importar clases-->
+<%@page import="ar.com.codoacodo.domain.Producto"%>
+<%@page import="java.util.List"%>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
-  <!--Código html para mostrar lo que viene desde el controller-->
-  <body>
-    <main class="container m-3">
-      <h1>Listado de productos</h1>
-    </main>
-
-    <section class="container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-  </body>
+	<head>
+		<jsp:include page="styles.jsp"/>
+	</head>
+	<!-- codigo html para mostrar la tabla que viene desde el controller-->
+	<body>
+		<!-- aca va el navbar.jsp -->
+		<jsp:include page="navbar.jsp"/>
+		<main class="container">
+			<h1>Listado de Producto</h1>
+			<section>
+				<table class="table">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">C&oacute;digo</th>
+				      <th scope="col">T&iacute;tulo</th>
+				      <th scope="col">Precio</th>
+				      <th scope="col">Fecha Alta</th>
+				      <th scope="col">Autor</th>
+				      <th scope="col">Imagen</th>
+				      <th scope="col">&nbsp;</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  <% //scriplet
+				  	//en las jsp exixte un objeto llamado request que esta implicito
+				  	//capurar/bajar/obtener la lista que guardamos en el controller
+				  	List<Producto> listado = (List<Producto>)request.getAttribute("productos");
+				  	for(Producto p : listado) {
+				  %>
+				    <tr>
+				      <th scope="row"><%=p.getId()%></th>
+				      <td><%=p.getCodigo()%></td>
+				      <td><%=p.getTitulo()%></td>
+				      <td><%=p.getPrecio()%></td>
+				      <td><%=p.getFechaAlta()%></td>
+				      <td><%=p.getAutor()%></td>
+				      <td><%=p.getImg()%></td>
+				      <td>Editar | Eliminar</td>
+				    </tr>
+				  <%
+				  	}
+				  %>				    
+				  </tbody>
+				</table>
+			</section>
+		</main>
+		<jsp:include page="scripts.jsp"/>
+	</body>
 </html>
