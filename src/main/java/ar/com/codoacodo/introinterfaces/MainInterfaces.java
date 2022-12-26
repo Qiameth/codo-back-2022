@@ -8,7 +8,7 @@ public class MainInterfaces {
 		
 		//Clase nombreObjeto = new Clase();
 	
-		Perro patan = new Perro("patan");
+		/*Perro patan = new Perro("patan");
 		
 		//por implementar IHablar las dos instancias
 		// entienden el metodo hablar()
@@ -26,7 +26,7 @@ public class MainInterfaces {
 						
 		IHablar i = pers[0];
 		i.hablar();
-		
+		*/
 
 	}
 }

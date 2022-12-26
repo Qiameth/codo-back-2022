@@ -1,6 +1,7 @@
 package ar.com.codoacodo.introinterfaces;
 
 public class Gato implements IHablar {
+	/*
 	private String nombre;
 	
 	public Gato() {
@@ -11,7 +12,7 @@ public class Gato implements IHablar {
 		super();
 		this.nombre = nombre;
 	}
-	
+	*/
 	
 	@Override
 	public void hablar() {

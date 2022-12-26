@@ -5,6 +5,7 @@ package ar.com.codoacodo.introinterfaces;
  * una vez que se implementa, es obligatorio usarla.
  * */
 public class Perro implements IHablar{
+	/*
 	
 	private String nombre;
 	
@@ -16,7 +17,7 @@ public class Perro implements IHablar{
 		super();
 		this.nombre = nombre;
 	}
-
+*/
 	/*polimorfismo: sobreescribe el método de la interfaz*/
 	@Override
 	public void hablar() {

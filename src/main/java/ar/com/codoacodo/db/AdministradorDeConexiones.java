@@ -8,7 +8,7 @@ public class AdministradorDeConexiones {
 	public static Connection getConnection() {
 		String hosts = "127.0.0.1";//localhost
 		String port = "3306";
-		String password = "root";
+		String password = "C3_B2.C0B41?aTl qq,1";//C3_B2.C0B41?aTl qq,1
 		String username = "root";
 		
 		//driver de conexion a la base de datos

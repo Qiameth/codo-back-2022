@@ -6,6 +6,7 @@
 	<packaging>war</packaging>
 	<description>proyecto web java, codo a codo 2c #22569</description>
 
+
 	<!--Agregamos la versión de Java-->
 	<properties>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -20,6 +21,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.31</version>
 		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -35,12 +37,21 @@
 			<version>2.3.3</version>
 			<scope>provided</scope>
 		</dependency>
-
 	</dependencies>
 
 	<!--Contexto de despliegue de la aplicación-->
+	<!--Agregué este plugin porque no dejaba de darme error-->
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.3.1</version>
+			</plugin>
+		</plugins>
+		<!--nombre-->
 		<finalName>app-web</finalName>
 	</build>
 
 </project>
+

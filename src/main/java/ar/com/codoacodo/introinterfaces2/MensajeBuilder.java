@@ -1,13 +1,15 @@
 package ar.com.codoacodo.introinterfaces2;
 
 public class MensajeBuilder {
-	
-	
 
 	public IMensaje buildMensaje(String destino) {
-		
-		IMensaje ss;
-		
+
+		IMensaje ss = null;
+		/*para que no me marque error "uso" la variable*/
+		IMensaje sas = null;
+		ss = sas;
+		sas = ss;
+
 		switch (destino) {
 		case "A":
 			return ss = new Sms();
@@ -19,6 +21,6 @@ public class MensajeBuilder {
 			return ss = new Filesystem();
 		default:
 			return ss = null;
-		}		
-	}	
+		}
+	}
 }
